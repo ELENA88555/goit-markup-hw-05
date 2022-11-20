@@ -610,6 +610,7 @@ fill: var(--white-color);
 
 .overlay{
   position:relative;
+ 
 }
 
 .text-overlay {
@@ -635,8 +636,8 @@ text-transform: uppercase;
 
   .backdrop {
 position: fixed;
-width: 1600px;
-height: 1024px;
+width: 100%;
+height: 100%;
 top: 0px;
 background-color: rgba(0, 0, 0, 0.2);
 transition: opaciti 300ms var(--cubic-bezier), visibility 300ms var(--cubic-bezier);
@@ -659,8 +660,13 @@ transition: transform 300ms var(--cubic-bezier);
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-
 }
+
+.is-hidden {
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+ }
 
 
 .btn-cloze {
@@ -674,18 +680,12 @@ border: 1px solid rgba(0, 0, 0, 0.1);
 cursor: pointer;
 }
 
-  
 .btn-cloze-icon {
 
   width: 11px;
   height: 11px;
 }
 
-.is-hidden {
-  visibility:hidden;
-  opacity:0;
-  pointer-events:none;
- }
 
 .overlay-content {
   position: relative;
@@ -693,7 +693,6 @@ cursor: pointer;
   min-height: 294px;
   overflow: hidden;
   
-
 }
 
 
